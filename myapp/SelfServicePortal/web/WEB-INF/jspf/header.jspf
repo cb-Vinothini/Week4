@@ -1,0 +1,21 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@page import="model.User"%>    
+
+<%
+    session = request.getSession(false);
+    User user = null;
+    if((session != null) && (session.getAttribute("user") != null)){
+        user = (User) session.getAttribute("user");
+    }
+    else{
+        request.getRequestDispatcher("/login.jsp").forward(request, response);
+    }        
+%>
+
+<span>
+    <a style="float: left;margin-left: 1%;" href="#">Space Portal</a>
+    <a style="float: right;margin-left: 1%;" href="logout">Logout</a>
+    <a style="float: right;margin-left: 1%;" href="deactivate">Deactivate</a>
+    <a style="float: right;margin-left: 1%;" id="right" href="#">Hi <%=user.firstName%></a>
+</span>
