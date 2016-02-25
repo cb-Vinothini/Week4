@@ -9,6 +9,7 @@ package model;
  *
  * @author cb-vinothini
  */
+
 public class User {
     public String firstName, lastName, email, line1, line2, city, state, country, zip;
     private String password;

@@ -218,7 +218,6 @@ public class UserDB {
             conn = getConnectionToDatabase();
             preparedStatement = conn.prepareStatement(deleteAccount);
             preparedStatement.setString(1, email);
-                System.out.println("check error");
             if(preparedStatement.executeUpdate() == 1 ){  
                 return true;
             }

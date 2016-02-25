@@ -17,26 +17,30 @@
             <%@include file="/WEB-INF/jspf/header.jspf" %>
         </div>
         <div id="profile">
+            <div>
+                <h1>Welcome to the Space Portal</h1>
+            </div>
+            <br>
+            <div id="content">
                 <div>
-                    <h1>Welcome to the Space Portal</h1>
+                    <span class="title">NAME</span>
+                    <span class="value"><%=user.firstName%> <%=user.lastName%></span>
                 </div>
-                <div id="content">
-                    <div>
-                        <span class="title">NAME</span>
-                        <span class="value"><%=user.firstName%> <%=user.lastName%></span>
-                    </div>
-                    <div>
-                        <span class="title">EMAIL</span>
-                        <span class="value"><%=user.email%></span>
-                    </div>
-                    <div>
-                        <span class="title">ADDRESS</span>
-                        <span class="value"><%=user.line1%><br><%=user.line2%><br><%=user.city%><br><%=user.state%><br><%=user.country%><br><%=user.zip%></span>
-                    </div>
-                </div>                
-                <div id="footer">
-                    <a href="editProfile.jsp">Edit Profile</a>
+                <br>
+                <div>
+                    <span class="title">EMAIL</span>
+                    <span class="value"><%=user.email%></span>
                 </div>
+                <br>
+                <div>
+                    <span class="title">ADDRESS</span>
+                    <span class="value"><br><%=user.line1%><br><%=user.line2%><br><%=user.city%><br><%=user.state%><br><%=user.country%><br><%=user.zip%></span>
+                </div>
+            </div>
+            <br>
+            <div id="footer">
+                <a href="editProfile.jsp">Edit Profile</a>
+            </div>
         </div>
     </body>
 </html>
